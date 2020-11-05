@@ -72,7 +72,7 @@
                        type="file"
                        name="avatar"
                        id="avatar"
-                       accept="images/*"
+                       accept="image/*"
                 >
 
                 <img src="{{ $user->avatar }}" alt="your avatar" width="40">
