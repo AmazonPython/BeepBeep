@@ -38,7 +38,7 @@ class User extends Authenticatable
     public function getAvatarAttribute($value)
     {
         //return asset($value ?: '/images/b.png');
-        return asset('storage/' . $value ?: '/images/b.png');
+        return asset('storage/'.$value ?: '/images/b.png');
     }
 
     //重设密码使用bcrypt()算法加密
