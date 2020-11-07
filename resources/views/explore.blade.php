@@ -5,7 +5,7 @@
 @foreach ($users as $user)
 <div>
     <a href="{{ $user->path() }}" class="flex items-center mb-5">
-        <img src="{{ $user->avatar }}" alt="{{ $user->Nickname }}'s avatar" width="60" class="mr-4 rounded">
+        <img src="{{ $user->avatar }}" alt="{{ $user->Nickname }}'s avatar" width="60" class="rounded-full mr-4 rounded">
 
         <div>
             <h4 class="font-bold">{{ '@' . $user->Nickname }}</h4>
