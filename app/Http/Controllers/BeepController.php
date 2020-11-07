@@ -17,12 +17,23 @@ class BeepController extends Controller
     //发布推文
     public function store()
     {
-        $attributes = request()->validate(['content' => 'required|max:255']);
-
-        Beep::create([
-            'user_id' => auth()->id(),
-            'content' => $attributes['content']
+        $attributes = request()->validate([
+            'content' => 'required|max:255',
+            'picture' => 'image|nullable'
         ]);
+
+        if (request('picture') != null) {
+            Beep::create([
+                'user_id' => auth()->id(),
+                'content' => $attributes['content'],
+                'picture' => $attributes['picture'] = request('picture')->store('upload')
+            ]);
+        }else{
+            Beep::create([
+                'user_id' => auth()->id(),
+                'content' => $attributes['content'],
+            ]);
+        }
 
         return redirect()->route('home');
     }

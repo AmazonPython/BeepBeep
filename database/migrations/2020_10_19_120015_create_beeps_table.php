@@ -17,6 +17,7 @@ class CreateBeepsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->string('content');
+            $table->string('picture')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')

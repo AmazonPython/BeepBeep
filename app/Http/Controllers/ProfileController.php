@@ -53,10 +53,6 @@ class ProfileController extends Controller
             ],
         ]);
 
-        /*if (request('avatar')) {
-            $attributes['avatar'] = request('avatar')->store('');
-        }*/
-
         if (request('avatar')) {
             $attributes['avatar'] = request('avatar')->storeAs(
                 '',

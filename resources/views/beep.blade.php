@@ -12,6 +12,10 @@
 
         <p class="text-m mb-3">
             {{ $beep->content }}
+
+            @if($beep->picture != null)
+                <img src="{{asset('/storage/' . $beep->picture)}}">
+            @endif
         </p>
 
         @auth
