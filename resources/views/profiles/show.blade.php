@@ -30,15 +30,15 @@
                         </a>
                     @endif
 
-                        <form method="POST" action="{{ $user->path('follow') }}">
-                        @csrf
+                    <form method="POST" action="{{ route('follow', $user->name) }}">
+                    @csrf
 
-                        @if (auth()->user()->isNot($user)){{--只能关注除自己以外的用户--}}
-                            <button class="bg-blue-500 rounded-full shadow ml-2 py-1 px-4 text-white text-sm">
-                                {{ auth()->user()->following($user) ? 'Unfollow' : 'Follow' }}
-                            </button>
-                        @endif
-                        </form>
+                    @if (auth()->user()->isNot($user)){{--只能关注除自己以外的用户--}}
+                        <button class="bg-blue-500 rounded-full shadow ml-2 py-1 px-4 text-white text-sm">
+                            {{ auth()->user()->following($user) ? 'Unfollow' : 'Follow' }}
+                        </button>
+                    @endif
+                    </form>
                 @endauth
             </div>
         </div>

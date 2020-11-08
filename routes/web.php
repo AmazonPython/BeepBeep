@@ -25,7 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profiles/{user}', 'ProfileController@update');
 
     //关注与取消关注 用户
-    Route::post('/profiles/{user}/follow', 'FollowController@store');
+    Route::post('/profiles/{user}/follow', 'FollowController@store')->name('follow');
 
     //喜欢与不喜欢推文
     Route::post('/beeps/{beep}/like', 'BeepLikesController@store');
