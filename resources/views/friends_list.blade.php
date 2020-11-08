@@ -8,7 +8,7 @@
                     <a href="{{ $user->path() }}" class="flex items-center text-sm">
                         <img src="{{ $user->avatar }}" class="rounded-full mr-2" alt="your avatar" width="40" height="40">
 
-                        {{ $user->name }}
+                        {{ $user->Nickname }}
                     </a>
                 </div>
             </li>

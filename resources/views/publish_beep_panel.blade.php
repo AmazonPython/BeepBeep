@@ -2,8 +2,17 @@
     <form method="POST" action="/beeps" enctype="multipart/form-data">
         @csrf
 
-        <textarea name="content" class="w-full" placeholder="What's up doc?" required autofocus="" spellcheck="false">
+        <textarea
+                name="content"
+                class="w-full"
+                placeholder="What's up doc?"
+                required autofocus=""
+                spellcheck="false"
+                onkeyup="checkLength(this);"
+        >
         </textarea>
+
+        <br /><small>文字最大长度: 255，还剩: <span id="chLeft">255</span>.</small>
 
         <hr class="my-4">
 

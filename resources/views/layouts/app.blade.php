@@ -74,5 +74,6 @@
 
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="http://unpkg.com/turbolinks"></script>
+    <script src="{{ asset('js/characters_check.js') }}"></script>
 </body>
 </html>

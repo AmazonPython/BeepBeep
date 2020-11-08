@@ -10,7 +10,7 @@
             <a href="{{ $beep->user->path() }}">{{ $beep->user->Nickname }}</a>
         </h5>
 
-        <p class="text-m mb-3">
+        <p style="word-wrap:break-word; word-break:break-all;" class="text-m mb-3">
             {{ $beep->content }}
 
             @if($beep->picture != null)
