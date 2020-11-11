@@ -10,13 +10,19 @@
             <a href="{{ $beep->user->path() }}">{{ $beep->user->Nickname }}</a>
         </h5>
 
-        <p style="word-wrap:break-word; word-break:break-all;" class="text-m mb-3">
+        <p class="text_limit" class="text-m mb-3">
             {{ $beep->content }}
 
             @if($beep->picture != null)
-                <img src="{{asset('/storage/' . $beep->picture)}}">
+                <img onclick="fun(this)" src="{{asset('/storage/' . $beep->picture)}}">
             @endif
         </p>
+
+        {{--图片放大--}}
+        <div class="filterPop" onclick="toHide()"></div>
+        <div class="setPops">
+            <img src="" alt="" width="100%" height="100%">
+        </div>
 
         @auth
             @if (auth()->user()->is($beep->user)){{--只能删除自己的推文--}}

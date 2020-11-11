@@ -15,6 +15,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/image_text_handle.css') }}" rel="stylesheet">
     <link rel="icon" href="{{ asset('images/favicon.png') }}">
 </head>
 <body style="background-color: #B4DAF0;">
@@ -72,8 +73,9 @@
         </section>
     </div>
 
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="http://unpkg.com/turbolinks"></script>
-    <script src="{{ asset('js/characters_check.js') }}"></script>
+<script src="http://unpkg.com/turbolinks"></script>
+<script src="{{ asset('js/characters_check.js') }}"></script>
+<script src="{{ asset('js/image_text_handle.js') }}"></script>
+<script src="http://www.jq22.com/jquery/jquery-1.9.1.js"></script>
 </body>
 </html>
