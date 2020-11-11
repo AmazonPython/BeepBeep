@@ -4,13 +4,12 @@
 
         <textarea
                 name="content"
-                class="w-full"
-                placeholder="What's up doc?"
+                class="w-full py-8"
+                placeholder="What do you want to say?"
                 required autofocus=""
                 spellcheck="false"
                 onkeyup="checkLength(this);"
-        >
-        </textarea>
+        ></textarea>
 
         <br /><small>文字最大长度: 255，还剩: <span id="chLeft">255</span>.</small>
 

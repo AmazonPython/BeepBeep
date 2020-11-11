@@ -35,7 +35,8 @@ class BeepController extends Controller
             ]);
         }
 
-        return redirect()->route('home');
+        $url = route('home');
+        return view('beeps.alert', compact('url'));
     }
 
     //删除推文

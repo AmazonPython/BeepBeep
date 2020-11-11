@@ -14,7 +14,7 @@
             {{ $beep->content }}
 
             @if($beep->picture != null)
-                <img onclick="fun(this)" src="{{asset('/storage/' . $beep->picture)}}">
+                <img width="200px" onclick="fun(this)" src="{{asset('/storage/' . $beep->picture)}}">
             @endif
         </p>
 
