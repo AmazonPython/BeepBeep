@@ -10,11 +10,12 @@
             <a href="{{ $beep->user->path() }}">{{ $beep->user->Nickname }}</a>
         </h5>
 
-        <p class="text_limit" class="text-m mb-3">
+        <p class="text_limit text-m mb-3">
             {{ $beep->content }}
 
             @if($beep->picture != null)
-                <img width="200px" onclick="fun(this)" src="{{asset('/storage/' . $beep->picture)}}">
+                {{--无法创建storage链接时使用{{  asset($beep->picture) }}--}}
+                <img onclick="fun(this)" width="200px" src="{{ asset('/storage/' . $beep->picture) }}">
             @endif
         </p>
 

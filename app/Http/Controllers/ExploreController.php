@@ -10,7 +10,7 @@ class ExploreController extends Controller
     public function __invoke()
     {
         return view('explore', [
-            'users' => User::paginate(3),
+            'users' => User::paginate(5),
         ]);
     }
 }

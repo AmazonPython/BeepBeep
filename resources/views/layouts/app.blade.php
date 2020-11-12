@@ -10,8 +10,7 @@
     <title>{{ config('app.name', 'BeepBeep') }}</title>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.loli.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
@@ -76,6 +75,6 @@
 <script src="http://unpkg.com/turbolinks"></script>
 <script src="{{ asset('js/characters_check.js') }}"></script>
 <script src="{{ asset('js/image_text_handle.js') }}"></script>
-<script src="http://www.jq22.com/jquery/jquery-1.9.1.js"></script>
+<script src="https://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
 </body>
 </html>

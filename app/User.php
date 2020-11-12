@@ -41,6 +41,7 @@ class User extends Authenticatable
             return asset('/images/avatar.png');
         }else{
             return asset('storage/'.$value);
+            //return asset($value);//无法创建storage链接时返回此值
         }
     }
 
@@ -59,7 +60,7 @@ class User extends Authenticatable
             ->orWhere('user_id', $this->id)
             ->withLikes()
             ->orderByDesc('id')
-            ->paginate(3);
+            ->paginate(10);
     }
 
     //设置一对多关系，多条推文从属于用户

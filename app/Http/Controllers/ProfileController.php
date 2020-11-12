@@ -56,9 +56,16 @@ class ProfileController extends Controller
         if (request('avatar')) {
             $attributes['avatar'] = request('avatar')->storeAs(
                 '',
-                request('Nickname') . '-avatar.' . request('avatar')->extension()
+                request('name') . '-avatar.' . request('avatar')->extension()
             );
         }
+
+        //无法创建storage链接时采用的办法
+        /*if (request('avatar')) {
+            $name = request('name') . '-avatar.' . request('avatar')->extension();
+
+            $attributes['avatar'] = request('avatar')->move('./images/avatar', $name);
+        }*/
 
         $user->update($attributes);
 
