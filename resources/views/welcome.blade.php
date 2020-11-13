@@ -7,7 +7,7 @@
     <title>{{ config('app.name', 'BeepBeep') }}</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link href="https://fonts.loli.net/css?family=Nunito:200,600" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="icon" href="{{ asset('images/favicon.png') }}">
@@ -46,7 +46,7 @@
         }
 
         .title {
-            font-size: 90px;
+            font-size: 85px;
         }
 
         .links > a {

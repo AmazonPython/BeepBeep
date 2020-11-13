@@ -52,7 +52,7 @@ class BeepController extends Controller
         $beep->content = $request->get('content');
 
         if ($request->hasFile('picture') && $request->file('picture')->isValid()){
-            $name = md5(time()) . '.' . $request->file('picture')->extension();
+            $name = auth()->user()->name . md5(time()) . '.' . $request->file('picture')->extension();
             $request->file('picture')->move('./images/beeps', $name);
             $beep->picture = '/images/beeps/' . $name;
         }
@@ -63,7 +63,7 @@ class BeepController extends Controller
             $url = route('home');
             return view('beeps.alert', compact('url'));
         } else {
-            return redirect()->back()->withInput()->withErrors('发布失败！');
+            return redirect()->back()->withInput()->withErrors('Sends failure!');
         }
     }*/
 

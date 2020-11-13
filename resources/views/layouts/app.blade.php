@@ -28,9 +28,7 @@
         </section>
 
         <section class="px-8">
-
             <main class="container mx-auto">
-
                 <div class="lg:flex lg:justify-center">
                     <div class="lg:w-32">
                         @include('sidebar_links'){{--引入sidebar_links.blade.php文件 侧边栏--}}
@@ -66,9 +64,7 @@
                     @endauth
                     
                 </div>
-
             </main>
-
         </section>
     </div>
 

@@ -13,6 +13,8 @@
             </label>
 
             <input class="border border-gray-400 p-2 w-full"
+                   onkeyup="this.value=this.value.replace(/[^\w\-]/g,'')"
+                   onpaste="this.value=this.value.replace(/[^\w\-]/g,'')"
                    type="text"
                    name="name"
                    id="name"
