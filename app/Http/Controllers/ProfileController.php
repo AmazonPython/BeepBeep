@@ -35,7 +35,7 @@ class ProfileController extends Controller
                 Rule::unique('users')->ignore($user),
             ],
             'Nickname' => ['string', 'required', 'max:30'],
-            'bio' => ['string', 'max:255'],
+            'bio' => ['max:255'],
             'avatar' => ['image'],
             'email' => [
                 'string',
