@@ -15,7 +15,7 @@
 
             @if($beep->picture != null)
                 {{--无法创建storage链接时使用{{  asset($beep->picture) }}--}}
-                <img onclick="fun(this)" width="200px" src="{{ asset('/storage/' . $beep->picture) }}">
+                <img class="mt-2" onclick="fun(this)" width="200px" src="{{ asset('/storage/' . $beep->picture) }}">
             @endif
         </p>
 
@@ -32,7 +32,7 @@
                 {{ method_field('DELETE') }}
                 {{ csrf_field() }}
 
-                <button type="submit" class="rounded-lg px-3 shadow border bg-pink-300">Delete</button>
+                <button type="submit" class="rounded-lg px-3 lg:ml-64 shadow border bg-pink-300">Delete</button>
             </form>
 
             @endif
