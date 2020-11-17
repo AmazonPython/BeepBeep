@@ -3,7 +3,7 @@
 @section('content'){{--渲染内容--}}
 
 <div>
-    发布成功！<meta http-equiv='Refresh' content='1;URL={{$url}}'>
+    Publish successfully!<meta http-equiv='Refresh' content='1;URL={{$url}}'>
 </div>
 
 @endsection{{--结束渲染--}}
