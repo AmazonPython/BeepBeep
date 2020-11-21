@@ -36,7 +36,7 @@ class ProfileController extends Controller
             ],
             'Nickname' => ['string', 'required', 'max:30'],
             'bio' => ['max:255'],
-            'avatar' => ['image'],
+            'avatar' => ['image', 'max:2048'],
             'email' => [
                 'string',
                 'required',

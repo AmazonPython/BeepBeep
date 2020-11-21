@@ -20,7 +20,7 @@ class BeepController extends Controller
     {
         $attributes = request()->validate([
             'content' => 'required|max:255',
-            'picture' => 'image|nullable'
+            'picture' => 'image|nullable|max:2048'
         ]);
 
         if (request('picture') != null) {
