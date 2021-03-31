@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="" />
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -58,11 +59,11 @@
                     </div>
 
                     @auth
-                    <div class="lg:w-1/6">    
+                    <div class="lg:w-1/6">
                         @include('friends_list'){{--关注列表--}}
                     </div>
                     @endauth
-                    
+
                 </div>
             </main>
         </section>
