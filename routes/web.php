@@ -13,7 +13,7 @@ Route::get('/profiles/{user}', 'ProfileController@show')->name('profile');
 //使用中间件登录验证，访客不允许访问
 Route::middleware('auth')->group(function () {
     //个人主页
-    Route::get('/beeps', 'BeepController@index')->name('home');//路由命名，使用route()访问
+    Route::get('/', 'BeepController@index')->name('home');//路由命名，使用route()访问
 
     //发送推文
     Route::post('/beeps', 'BeepController@store');
