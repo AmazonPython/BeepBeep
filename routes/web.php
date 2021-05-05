@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+//访客主页
+Route::get('/', function () {
+    return view('welcome');
+});
+
 //世界大厅 单动作控制器注册路由时，无需指定方法
 Route::get('/explore', 'ExploreController');
 
@@ -9,9 +14,9 @@ Route::get('/explore', 'ExploreController');
 Route::get('/profiles/{user}', 'ProfileController@show')->name('profile');
 
 //使用中间件登录验证，访客不允许访问
-Route::middleware('auth')->group(function () {
+Route::middleware(['verified', 'auth'])->group(function () {
     //个人主页
-    Route::get('/', 'BeepController@index')->name('home');//路由命名，使用route()访问
+    Route::get('/beeps', 'BeepController@index')->name('home');//路由命名，使用route()访问
 
     //发送推文
     Route::post('/beeps', 'BeepController@store');
@@ -30,4 +35,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/beeps/{beep}/like', 'BeepLikesController@destroy');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
