@@ -38,7 +38,7 @@
                     <div class="lg:flex-1 lg:mx-10 lg:mb-10" style="max-width: 700px">
                         @yield('content')
 
-                        <div class="mt-32">
+                        <div>
                             <p>
                                 BeepBeep is a very simple Twitter clone written in PHP as an example Laravel application.
                                 Used PHP: The Right Way, an easy-to-read, quick reference for PHP popular coding standards.
