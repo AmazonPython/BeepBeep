@@ -73,5 +73,6 @@
 <script src="{{ asset('js/characters_check.js') }}"></script>
 <script src="{{ asset('js/image_text_handle.js') }}"></script>
 <script src="https://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.js" type="module" integrity="sha256-DdSiNPR71ROAVMqT6NiHagLAtZv9EHeByYuVxygZM5g="></script>
 </body>
 </html>
